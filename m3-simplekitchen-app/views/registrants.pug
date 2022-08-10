@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+    if registrations.length
+        table.listing-table.table-dark.table-striped
+            tr
+                th Name
+                th Email
+                th Username
+                th Password
+            each registration in registrations
+                tr
+                    td= registration.name
+                    td= registration.email
+                    td= registration.user
+                    td= registration.pwd
+    else
+        p No registrations yet :(
